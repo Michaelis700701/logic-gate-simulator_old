@@ -1,0 +1,3 @@
+[submodule "pygame-support"]
+	path = pygame-support
+	url = https://github.com/Michaelis700701/pygame-support.git
