@@ -1,6 +1,6 @@
 import pygame
 from settings import *
-from game import ChessBoard
+from sandbox import Sandbox
 
 class Main():
     def __init__(self) -> None:
@@ -29,15 +29,15 @@ class AppStateManager():
         """
         Manages the current state that needs to run.
         """
-        self.chess_board = ChessBoard()
-        ACTIVE_STATE['active_state'] = 'chess_board'
+        self.sandbox = Sandbox()
+        ACTIVE_STATE['active_state'] = 'sandbox'
 
     def run_state(self) -> None:
         """
         Runs which ever state is currently active.
         """
-        if ACTIVE_STATE['active_state'] == 'chess_board':
-            self.chess_board.run()
+        if ACTIVE_STATE['active_state'] == 'sandbox':
+            self.sandbox.run()
 
 if __name__ == '__main__':
     main = Main()
